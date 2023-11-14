@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="static/img/mhcicon.png" type="image/x-icon">
+    <title>Welcome to Your Chatbot App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #444654;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #202123;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        #secondary_container{
+            background-color: #444654;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            background-color: #202123;
+            padding: 20px 0;
+        }
+
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px; /* Adjust margin here */
+        }
+
+        .navbar-links {
+            display: flex;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+            padding: 15px;
+        }
+
+        .navbar-links a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav>
+            <div class="navbar-content">
+                 <a href="{{ url_for('welcome') }}">
+    <div class="navbar-logo">
+       <img src="static/img/mhcicon.png" alt="Logo">
+    </div>
+</a>
+                <div class="navbar-links">
+                    <a href="{{ url_for('register') }}">Register</a>
+                    <a href="{{ url_for('login') }}">Login</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container" id="secondary_container">
+        <div class="row">
+            <div class="col-md-6">
+                <strong><h1 style="color: Black">Mental Health Chat Bot</h1></strong>
+                <p>
+                    The Mental Health Chatbot is an innovative and compassionate digital companion designed to provide a safe and supportive space for individuals to express their innermost thoughts and emotions. Developed with a deep understanding of mental health and well-being, this chatbot offers users an opportunity to engage in meaningful conversations, receive guidance, and access valuable resources, all while maintaining complete anonymity and privacy. Whether seeking a listening ear or valuable insights, the Mental Health Chatbot is here to promote emotional wellness, offer solace, and foster a sense of connection, making it an invaluable tool for those navigating the complexities of mental health.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="static/img/Health Poster1.png" class="img-fluid" alt="Welcome Image">
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

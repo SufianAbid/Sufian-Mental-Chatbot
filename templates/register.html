@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="static/img/mhcicon.png" type="image/x-icon">
+    <title>Register</title>
+    <style>
+        body {
+            background-color: #444654;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #202123;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        #secondary_container{
+            background-color: #444654;
+            color: white;
+        }
+        h2 {
+            text-align: center;
+            color: white;
+        }
+        nav {
+            background-color: #202123;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .navbar-links {
+            display: flex;
+        }
+        .navbar-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+            padding: 15px;
+        }
+        .navbar-links a:hover {
+            color: #0056b3;
+        }
+        /* Additional Styles */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+        .col-md-6 {
+            flex: 1;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        .col-md-6:nth-child(2) {
+            background-color: #202123;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #202123;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        p {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav>
+            <div class="navbar-content">
+                <div class="navbar-logo">
+                   <a href="{{ url_for('welcome') }}">
+    <div class="navbar-logo">
+       <img src="static/img/mhcicon.png" alt="Logo">
+    </div>
+</a>  </div>
+                <div class="navbar-links">
+                    <a href="{{ url_for('register') }}">Register</a>
+                    <a href="{{ url_for('login') }}">Login</a>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container" id="secondary_container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Register</h2>
+                <form action="/register" method="POST">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Already have an account? <a href="{{ url_for('login') }}">Log in</a></p>
+            </div>
+            <div class="col-md-6" id="secondary_container">
+                <image src="static/img/Health Poster.png" height="380px" width="350px"></image>
+                <p>
+Join us today and discover how our chatbot can simplify your life, answer your questions, and provide tailored solutions. Sign up now and become a valued member of our growing family!                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="static/img/mhcicon.png" type="image/x-icon">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #444654;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #202123;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        #secondary_container {
+            background-color: #444654;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            background-color: #202123;
+            padding: 20px 0;
+        }
+
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar-links {
+            display: flex;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+            padding: 15px;
+        }
+
+        .navbar-links a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav>
+            <div class="navbar-content">
+                    <div class="navbar-logo">
+                        <img src="static/img/mhcicon.png" alt="Logo">
+                    </div>
+                <div class="navbar-links">
+                   <a href="{{ url_for('chatbot') }}">Chatbot</a>
+                    {% if 'logged_in' in session %}
+            <a href="{{ url_for('logout') }}">Logout</a>
+            {% endif %}
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container" id="secondary_container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 style="color: black">About Us</h1>
+                <p>
+                    Welcome to our Mental Health Chatbot! My name is <strong>Sufian Abid</strong>, and I'm the developer behind this project. I'm passionate about creating a safe and supportive space for individuals to express their thoughts and emotions freely, without judgment. Our chatbot is designed to provide a listening ear and offer assistance with mental health concerns.
+                    <br>
+                    If you have any questions, suggestions, or just want to reach out, please feel free to contact me at <strong>sufianabid388@gmail.com</strong>. Your feedback is valuable as we strive to improve our chatbot and make it a valuable resource for emotional well-being.
+                    <br>
+                    Thank you for using our service, and remember, you're not alone on your journey to better mental health!
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="static/img/sufian2.jpg" class="img-fluid" alt="Author Image">
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

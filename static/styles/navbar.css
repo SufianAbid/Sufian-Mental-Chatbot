@@ -1,0 +1,35 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #202123;
+  z-index: 100;
+  background-color: #343541;
+  color: #A5CFF1;
+  text-align: center;
+}
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding-left: 285px;
+  padding-right: 300px;
+}
+
+.navbar-logo img {
+  width: 50px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.navbar-links a:hover {
+  color: blue; /* Change color on hover */
+}
+
