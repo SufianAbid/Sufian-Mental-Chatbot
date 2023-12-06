@@ -99,7 +99,7 @@
     },
     {"tag": "scared",
         "patterns": ["I'm scared", "That sounds awful. What do i do?", "No i don't want to feel this way", "I am scared for myself"],
-        "responses": ["It's only natural to feel this way. I'm here for you.", "It'll all be okay. This feeling is only momentary.", "I understand how you feel. Don't put yourself down because of it."]
+        "responses": ["It's only natural to feel this way. I'm here for you.", "It'll all be okay. This feeling is only momentary. You  will be ok", "I understand how you feel. Don't put yourself down because of it."]
     },
     {"tag": "death",
         "patterns": ["My mom died", "My brother died", "My dad passed away", "My sister passed away", "Someone in my family died", "My friend passed away"],
